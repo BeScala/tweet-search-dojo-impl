@@ -1,0 +1,14 @@
+@(message: String, myForm: Form[models.SearchTerm])
+
+@import views.html.helper._
+
+@main("Welcome to Play 2.0") {
+    
+    @form(action = routes.Application.addSearch) {
+
+       @inputText(myForm("term"), '_label -> "Add Search Term")
+
+       <input type="submit" value="add">
+    }
+    
+}
